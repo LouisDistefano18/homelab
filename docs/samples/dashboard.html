@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+  SAMPLE OUTPUT — sanitized for the public repo.
+  This is the monitoring/dashboards/app.py template rendered with placeholder
+  values, so visitors can see the live dashboard without needing AWS access.
+  Real instance ID, public IP, and AMI replaced with i-EXAMPLE.../203.0.113.x.
+  The live app pulls these values from AWS via boto3 and refreshes every 60s.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homelab Dashboard</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d1117; color: #e6edf3; padding: 20px; }
+        h1 { color: #58a6ff; font-size: 1.4em; margin-bottom: 4px; }
+        .subtitle { color: #8b949e; font-size: 0.85em; margin-bottom: 24px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px; }
+        .card { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 16px; }
+        .card.full { grid-column: 1 / -1; }
+        .card-title { color: #8b949e; font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+        .card-value { font-size: 1.4em; font-weight: 600; }
+        .running { color: #3fb950; }
+        .stopped { color: #f85149; }
+        .pending { color: #d29922; }
+        .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.75em; font-weight: 600; }
+        .badge.running { background: #0d4429; color: #3fb950; }
+        .badge.stopped { background: #3d1a1a; color: #f85149; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.85em; }
+        th { color: #8b949e; text-align: left; padding: 6px 0; border-bottom: 1px solid #30363d; font-weight: 500; }
+        td { padding: 8px 0; border-bottom: 1px solid #21262d; }
+        .refresh { color: #8b949e; font-size: 0.75em; margin-top: 16px; text-align: center; }
+        .error { color: #f85149; }
+    </style>
+</head>
+<body>
+    <h1>Homelab Dashboard</h1>
+    <p class="subtitle">2026-05-27 19:48:07 &nbsp;·&nbsp; sample output, values sanitized</p>
+
+    <div class="grid">
+        <div class="card">
+            <div class="card-title">EC2 State</div>
+            <div class="card-value running">running</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Instance Type</div>
+            <div class="card-value">t3.micro</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Public IP</div>
+            <div class="card-value" style="font-size:1em">203.0.113.10</div>
+        </div>
+        <div class="card">
+            <div class="card-title">Availability Zone</div>
+            <div class="card-value" style="font-size:1em">us-east-1a</div>
+        </div>
+        <div class="card full">
+            <div class="card-title">S3 Log Bucket</div>
+            <table>
+                <tr><th>Metric</th><th>Value</th></tr>
+                <tr><td>Bucket</td><td>louislab-logs</td></tr>
+                <tr><td>Total Objects</td><td>4</td></tr>
+                <tr><td>Total Size</td><td>2.01 KB</td></tr>
+            </table>
+        </div>
+        <div class="card full">
+            <div class="card-title">Instance Details</div>
+            <table>
+                <tr><th>Field</th><th>Value</th></tr>
+                <tr><td>Instance ID</td><td>i-EXAMPLE0123456789</td></tr>
+                <tr><td>Name</td><td>homelab-server-01</td></tr>
+                <tr><td>Launch Time</td><td>2026-05-27 13:39:58</td></tr>
+                <tr><td>AMI</td><td>ami-EXAMPLE0123456789</td></tr>
+            </table>
+        </div>
+    </div>
+    <div class="refresh">Auto-refreshes every 60 seconds</div>
+</body>
+</html>

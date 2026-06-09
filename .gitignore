@@ -1,0 +1,46 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs & temp
+*.log
+*.tmp
+.env
+
+# Downloaded installers / binaries (e.g. the Entra provisioning agent)
+*.exe
+*.msi
+
+# Secrets / keys
+homelab-key.pem
+*.pem
+logs/*.log
+reports/*.html
+
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+crash.log
+crash.*.log
+
+# Python (Flask dashboard)
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.Python
+instance/
+*.egg-info/
+.pytest_cache/

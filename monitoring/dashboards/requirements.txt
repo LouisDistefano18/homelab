@@ -1,0 +1,7 @@
+# Flask monitoring dashboard dependencies.
+# Install:  pip install -r requirements.txt
+# Run:      DASHBOARD_USER=you DASHBOARD_PASS=secret gunicorn -b 0.0.0.0:5000 app:app
+# (needs AWS credentials available to boto3 — IAM role on EC2, or a local profile)
+flask>=3.0
+boto3>=1.34
+gunicorn>=21.2

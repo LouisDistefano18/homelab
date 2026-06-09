@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--
+  SAMPLE OUTPUT — sanitized for the public repo.
+  Real instance ID, public/private IPs, and AMI have been replaced with
+  RFC 5737 / placeholder values (203.0.113.x, i-EXAMPLE..., ami-EXAMPLE...).
+  Produced by: aws/scripts/Get-LabEC2Status.ps1 -Report
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EC2 Status Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #1a1a2e; color: #eee; padding: 40px; }
+        h1 { color: #00d4ff; }
+        .card { background: #16213e; border-radius: 8px; padding: 24px; max-width: 600px; }
+        .row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #0f3460; }
+        .label { color: #aaa; }
+        .value { font-weight: bold; }
+        .state { color: #2ecc71; font-weight: bold; }
+        .footer { margin-top: 20px; color: #555; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <h1>Homelab — EC2 Status Report</h1>
+    <div class="card">
+        <div class="row"><span class="label">Instance ID</span><span class="value">i-EXAMPLE0123456789</span></div>
+        <div class="row"><span class="label">Name</span><span class="value">homelab-server-01</span></div>
+        <div class="row"><span class="label">State</span><span class="state">running</span></div>
+        <div class="row"><span class="label">Instance Type</span><span class="value">t3.micro</span></div>
+        <div class="row"><span class="label">Public IP</span><span class="value">203.0.113.10</span></div>
+        <div class="row"><span class="label">Private IP</span><span class="value">172.31.0.10</span></div>
+        <div class="row"><span class="label">Launch Time</span><span class="value">05/27/2026 13:39:58</span></div>
+        <div class="row"><span class="label">Availability Zone</span><span class="value">us-east-1a</span></div>
+        <div class="row"><span class="label">AMI</span><span class="value">ami-EXAMPLE0123456789</span></div>
+    </div>
+    <div class="footer">Generated: 2026-05-27 19:48:07 &nbsp;·&nbsp; sample output, values sanitized</div>
+</body>
+</html>

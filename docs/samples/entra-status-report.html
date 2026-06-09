@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Entra ID Status Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #1a1a2e; color: #eee; padding: 40px; }
+        h1 { color: #00d4ff; }
+        .card { background: #16213e; border-radius: 8px; padding: 24px; max-width: 600px; }
+        .row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #0f3460; }
+        .label { color: #aaa; }
+        .value { font-weight: bold; }
+        .state { color: #2ecc71; font-weight: bold; }
+        .footer { margin-top: 20px; color: #555; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <h1>Homelab — Entra ID Status Report</h1>
+    <div class="card">
+        <div class="row"><span class="label">Tenant</span><span class="value">example.onmicrosoft.com</span></div>
+        <div class="row"><span class="label">Tenant ID</span><span class="value">00000000-0000-0000-0000-000000000000</span></div>
+        <div class="row"><span class="label">Directory</span><span class="value">Default Directory</span></div>
+        <div class="row"><span class="label">Signed in as</span><span class="value">louis@example.com</span></div>
+        <div class="row"><span class="label">Directory sync</span><span class="state">enabled</span></div>
+        <div class="row"><span class="label">Last sync</span><span class="value">2026-05-29 11:54:12</span></div>
+        <div class="row"><span class="label">Synced users</span><span class="value">4</span></div>
+        <div class="row"><span class="label">Synced groups</span><span class="value">2</span></div>
+    </div>
+    <div class="footer">Generated: 2026-05-29 11:58:03 &nbsp;·&nbsp; sample output, values sanitized</div>
+</body>
+</html>
