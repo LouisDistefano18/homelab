@@ -214,7 +214,6 @@ _[`monitoring/dashboards/app.py`](monitoring/dashboards/app.py) rendered with pl
 ```
 homelab/
 ├── README.md
-├── LICENSE
 ├── docs/
 │   ├── BUILD-NOTES.md      # build order, decisions, trade-offs
 │   └── samples/            # sanitized renders of the dashboard & reports
